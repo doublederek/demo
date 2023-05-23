@@ -1,0 +1,14 @@
+.sidebar-container {
+  display: flex;
+  background-color: #9c9c9c;
+  padding: 8px;
+}
+
+.sidebar-nav .nav-link {
+  color: ghostwhite;
+}
+
+.sidebar-nav .nav-link.active {
+  background-color: ghostwhite;
+  color: #0c0c0c;
+}

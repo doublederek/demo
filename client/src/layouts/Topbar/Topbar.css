@@ -1,0 +1,18 @@
+.topbar-container {
+  display: flex;
+  background-color: #0c0c0c;
+  padding: 8px;
+}
+
+.topbar-derek-bio {
+  flex: 1 1 auto;
+  color: ghostwhite;
+  align-items: center;
+}
+
+.topbar-actions {
+  width: 176px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
