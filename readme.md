@@ -1,5 +1,5 @@
-# A Full-Stack Demo Project.
+# An In-Progress Full-Stack Demo Project.
 
-Front End - TypeScript + React + Bootstrap + CSS
+**Front End** - TypeScript + React + Bootstrap + CSS
 
-Back End - ExpressJS + mySQL
+**Back End** - ExpressJS + mySQL
