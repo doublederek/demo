@@ -9,3 +9,19 @@ export interface Player {
   score: number,
   badges: Badge[],
 }
+
+export interface TarotCardData {
+  name: string,
+  fortune_telling: string[],
+  keywords: string[],
+  meanings: {
+    light: string[],
+    shadow: string[],
+  },
+  "Questions to Ask": string[],
+}
+
+export interface TarotCard {
+  url: string,
+  data: TarotCardData | null,
+}

@@ -2,18 +2,25 @@ import './Topbar.css';
 import React from 'react';
 import Button from '../../components/Button';
 
-export default function Topbar() {
+interface TopbarProps {
+  withAuth?: boolean
+}
+
+export default function Topbar({ withAuth = false }: TopbarProps) {
+  const authMarkup = withAuth ? (
+    <section className='topbar-actions'>
+      <Button small icon='BsAwardFill' />
+      <Button small icon='BsFillGearFill' />
+      <Button label='Log out' />
+    </section>
+  ) : <span className='topbar-titles'>FRONT END DEVELOPER // GAME DEVELOPER // EDUCATOR</span>;
+
   return(
     <header className='topbar-container'>
       <section className='topbar-derek-bio'>
-        <span style={{ fontSize: '1.75em', fontFamily: 'Lot' }}>DEREK LEDOUX </span>
-        <span style={{ fontSize: 'small' }}> EDUCATOR // GAME DEVELOPER // FRONT END DEVELOPER</span>
+        <span style={{ fontSize: '1.75em', fontFamily: 'Lot' }}>DEREK LEDOUX</span>
       </section>
-      <section className='topbar-actions'>
-        <Button small icon='BsAwardFill' />
-        <Button small icon='BsFillGearFill' />
-        <Button label='Log out' />
-      </section>
+      { authMarkup }
     </header>
   );
 }

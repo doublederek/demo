@@ -8,6 +8,7 @@
   flex: 1 1 auto;
   color: ghostwhite;
   align-items: center;
+  margin-left: 4px;
 }
 
 .topbar-actions {
@@ -15,4 +16,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.topbar-titles {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: LoveOfThunder;
+  color: ghostwhite;
+  margin-right: 4px;
 }
