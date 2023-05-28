@@ -1,0 +1,16 @@
+.module-container {
+  background-color: #9C9C9C;
+  margin: 6px;
+  padding: 12px;
+  border-radius: 12px;
+  font-family: LoveOfThunder;
+}
+
+.module-title {
+  color: #0C0C0C;
+}
+
+.module-subtitle {
+  color: ghostwhite;
+  font-size: larger;
+}

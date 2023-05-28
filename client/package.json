@@ -8,12 +8,15 @@
     "start-old": "webpack-dev-server --open",
     "start": "webpack serve --open --config webpack.dev.js",
     "build-old": "webpack --mode production",
-    "build": "webpack --config webpack.prod.js"
+    "build": "webpack --config webpack.prod.js",
+    "predeploy" : "yarn build",
+    "deploy" : "gh-pages -d build"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@material-ui/core": "^4.12.4",
     "@react-three/drei": "^9.68.6",
     "@react-three/fiber": "^8.13.0",
     "bootstrap": "^5.2.3",
@@ -38,6 +41,7 @@
     "babel-loader": "^8.3.0",
     "css-loader": "^6.7.3",
     "file-loader": "^6.2.0",
+    "gh-pages": "^5.0.0",
     "html-loader": "^4.2.0",
     "html-webpack-plugin": "^5.5.1",
     "style-loader": "^3.3.2",

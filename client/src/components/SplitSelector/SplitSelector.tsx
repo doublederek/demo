@@ -5,8 +5,9 @@ import bg from '../Tarot/assets/bgDark.gif';
 export default function SplitSelector() {
   const [hoveredDiv, setHoveredDiv] = useState(null);
 
-  const handleMouseEnter = (index: any) => setHoveredDiv(index);
   const handleMouseLeave = () => setHoveredDiv(null);
+  const handleMouseEnter = (index: number) => setHoveredDiv(index);
+  const handleMouseClick = (index: number) => console.log(`CLICK ${ index }`);
 
   const getDivWidth = (index: any) => {
     if (hoveredDiv !== null) {
@@ -55,6 +56,7 @@ export default function SplitSelector() {
           style={{ width: getDivWidth(index), backgroundImage: `${ index === 1 ? `url(${ bg })` : '' }` }}
           onMouseEnter={ () => handleMouseEnter(index) }
           onMouseLeave={  handleMouseLeave }
+          onClick={ () => handleMouseClick(index) }
         >
           { sectionMarkup(index) }
         </div>

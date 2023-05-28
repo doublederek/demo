@@ -6,6 +6,7 @@
   overflow: hidden;
   display: flex;
   height: 95vh;
+  cursor: pointer;
 }
 
 .split-selector-box {
