@@ -3,18 +3,22 @@ import React, { useEffect, useState } from 'react';
 import { subrouteMap } from '../../data/routes';
 import { useLocation } from 'react-router-dom';
 
-export default function Content() {
-  const [subroute, setSubroute] = useState('home')
-  const location = useLocation();
+interface ContentProps {
+  content: string
+}
 
-  useEffect(() => {
-    let route = location.hash.substring(1);
+export default function Content({ content }: ContentProps) {
+  // const [subroute, setSubroute] = useState('home')
+  // const location = useLocation();
 
-    if (route)
-      setSubroute(route);
-  }, [location]);
+  // useEffect(() => {
+  //   let route = location.hash.substring(1);
 
-  const contentMarkup = (subrouteMap as any)[subroute];
+  //   if (route)
+  //     setSubroute(route);
+  // }, [location]);
+
+  const contentMarkup = (subrouteMap as any)[content];
   
   return(
     <main className='content-container'>

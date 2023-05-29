@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "src/demo.tsx",
+  "homepage": "https://github.com/doublederek/demo",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start-old": "webpack-dev-server --open",
@@ -10,7 +11,7 @@
     "build-old": "webpack --mode production",
     "build": "webpack --config webpack.prod.js",
     "predeploy" : "yarn build",
-    "deploy" : "gh-pages -d build"
+    "deploy" : "gh-pages -d dist"
   },
   "keywords": [],
   "author": "",

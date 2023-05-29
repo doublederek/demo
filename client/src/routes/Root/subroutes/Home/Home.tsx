@@ -26,13 +26,25 @@ const uqo = [
   'Engaged in self-directed field recordings, and coordinated recording sessions with external talent and businesses.',
 ];
 
+const gamedev = [
+  'Honed my skills in game design, learning essential principles and methodologies to create compelling gameplay mechanics, captivating narratives, and immersive player experiences.',
+  'Emphasized the importance of rapid prototyping, equipping me with the ability to quickly iterate and test ideas. Developed a strong foundation in prototyping techniques, bringing concepts to life and evaluated their feasibility early.',
+  'Gained comprehensive knowledge in sound design, exploring the art of creating audio assets, implementing sound effects, and composing music to enhance the overall atmosphere and immersion of game environments.',
+];
+
+const theatre = [
+  'Delved into the art of playwriting, crafting compelling narratives and dialogue. Had the opportunity to direct and bring stories to life on stage, as well as explore my own talents as an actor, honing my skills in character development and performance.',
+  'Gained proficiency in stage management, learning the intricacies of coordinating productions, organizing schedules, and ensuring smooth performances. Additionally, I developed technical audiovisual (AV) skills, mastering the use of sound and lighting.',
+  'Built a deep understanding of narrative structure, character arcs, and the use of theatrical elements to engage and evoke meaningful responses from viewers.',
+];
+
 export default function Home() {
   return (
     <Slide direction='up' in>
       <section className='home-container'>
       <section className='home-info-row'>
         <section style={{ flex: '1 1 auto' }}>
-          <span><h1>Derek Ledoux</h1>Front End Developer // Game Developer // Educator</span><br /><br />
+          <div style={{ display: 'flex' }}><span style={{ flex: '1 1 auto' }}><h1>Derek Ledoux</h1>Front End Developer // Game Developer // Educator</span><span style={{ alignSelf: 'flex-end', fontSize: 'large' }}>derekledoux@gmail.com</span></div><br /><br />
           <p>I'm a versatile developer with a passion for crafting playful experiences. Whether it's designing captivating websites and interfaces, bringing worlds to life in videogames, or creating engaging educational content, I thrive on the intersection of technology, creativity, and growth. With exceptional front-end development skills, a knack for game design, and a love for sharing knowledge, I'm excited to contribute my skills and collaborate with a team that values playful innovation and impact.</p>
         </section>
         <img src='https://raw.githubusercontent.com/doublederek/demo/main/assets/derek.png' />
@@ -47,8 +59,8 @@ export default function Home() {
         </section>
         <section className='home-card' style={{ flex: 1 }}>
           <h2>Education</h2>
-          <Highlight where='Algonquin College' what='Game Development' when='Sept 2007 - April 2010' why={ algonquin }/>
-          <Highlight where='Algonquin College' what='Theatre Arts' when='Sept 2002 - April 2004' why={ algonquin }/>
+          <Highlight where='Algonquin College' what='Game Development' when='Sept 2007 - April 2010' why={ gamedev }/>
+          <Highlight where='Algonquin College' what='Theatre Arts' when='Sept 2002 - April 2004' why={ theatre }/>
         </section>
       </section>
     </section>

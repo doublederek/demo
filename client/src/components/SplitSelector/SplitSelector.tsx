@@ -1,13 +1,19 @@
 import React, { useState } from 'react';
 import './SplitSelector.css';
 import bg from '../Tarot/assets/bgDark.gif';
+import dereksGameBG from '../../routes/Root/subroutes/Play/components/DereksGame/dereks-game.gif';
+import accolades from '../../routes/Root/subroutes/Play/components/Accolades/accolades.gif'
 
-export default function SplitSelector() {
+interface SplitSelectorProps {
+  setSelection: (selection: number) => void
+}
+
+export default function SplitSelector({ setSelection }: SplitSelectorProps) {
   const [hoveredDiv, setHoveredDiv] = useState(null);
 
   const handleMouseLeave = () => setHoveredDiv(null);
   const handleMouseEnter = (index: number) => setHoveredDiv(index);
-  const handleMouseClick = (index: number) => console.log(`CLICK ${ index }`);
+  const handleMouseClick = (index: number) => setSelection(index);
 
   const getDivWidth = (index: any) => {
     if (hoveredDiv !== null) {
@@ -18,20 +24,23 @@ export default function SplitSelector() {
 
   const leftMarkup = (
     <div className='split-selector-box-underlay' style={{ transform: 'skewX(15deg) translate(-1px, -1px)' }}>
-      <p style={{ transform: 'translate(1px, 1px)', color: '#0c0c0c' }}>THING ONE</p>
+      <p style={{ transform: 'translate(1px, 1px)' }}>THING ONE</p>
+      <p style={{ fontSize: 'x-large' }}>GAME DEV ACCOLADES</p>
+      <p>NOTABLE RELEASES AND HONORS</p>
     </div>
   );
   
   const middleMarkup = (
     <div style={{ transform: 'skewX(15deg) translate(-1px, -1px)' }}>
       <p>THING TWO</p>
-      <p>TAROT CARD SIMULATOR</p>
+      <p style={{ fontSize: 'x-large' }}>TAROT CARD SIMULATOR</p>
     </div>
   );
   
   const rightMarkup = (
-    <div className='split-selector-box-underlay' style={{ transform: 'translateX(50%)' }}>
-      <p style={{ transform: 'translateX(-50%)', color: '#0c0c0c' }}>THING THREE</p>
+    <div className='split-selector-box-underlay' style={{ transform: 'skewX(15deg) translate(-1px, -1px) translateX(50%) ' }}>
+      <p style={{ transform: 'translateX(-30%)' }}>THING THREE</p>
+      <p style={{ transform: 'translateX(-30%)', fontSize: 'x-large' }}>"DEREK'S GAME"</p>
     </div>
   );
 
@@ -50,15 +59,18 @@ export default function SplitSelector() {
     <section className='split-contaienr'>
     <div className='split-selector-container'>
       {[0, 1, 2].map((index) => (
-        <div
+        <div className='split-selector-box-outter'
           key={ index }
-          className='split-selector-box'
-          style={{ width: getDivWidth(index), backgroundImage: `${ index === 1 ? `url(${ bg })` : '' }` }}
-          onMouseEnter={ () => handleMouseEnter(index) }
-          onMouseLeave={  handleMouseLeave }
-          onClick={ () => handleMouseClick(index) }
-        >
-          { sectionMarkup(index) }
+          style={{ width: getDivWidth(index), backgroundColor: index === 2 ? '#BD98CD' : 'transparent', backgroundImage: index === 0 ? `url(${ accolades })` : 'none' }}>
+          <div
+            className='split-selector-box'
+            style={{ width: '100%', backgroundImage: `${ index === 1 ? `url(${ bg })`: index === 2 ? `url(${ dereksGameBG })` : `url(${ accolades })` }` }}
+            onMouseEnter={ () => handleMouseEnter(index) }
+            onMouseLeave={  handleMouseLeave }
+            onClick={ () => handleMouseClick(index) }
+          >
+            { sectionMarkup(index) }
+          </div>
         </div>
       ))}
     </div>
