@@ -4,26 +4,27 @@ import Highlight from './components/Highlight';
 import Slide from '@material-ui/core/Slide';
 
 const shopify = [
-  'Designed and taught curricula in a highly competitive 4 year post secondary program, focused on core CS skills required for success at a fast paced high tech company, as well as key Shopify business technologies like Ruby on Rails, React/React Native & GraphQL',
-  'Worked with individual students and junior instructors to help achieve their career goals and personal ambitions.',
-  'Defined measurable success metrics of our program using KPIs, backed by executive stakeholders, iterated upon quarterly with the program.',
+  'Led end-to-end project management for various initiatives at Shopify, including yearly curriculum refreshes in Dev Degree, new LMS technology implementations, and leading teams of interns through mobile and internal app development.',
+  'Designed and delivered comprehensive curricula in both physical and e-learning settings, equipping Shopify developers with upgraded skills in core Computer Science, Frontend Development, and Backend Development (TypeScript, React, React Native, Ruby on Rails, MySQL, GraphQL, Kotlin, Swift).',
+  'Championed a core group of 20-45 interns annually, providing guidance, mentorship, and leadership support through stand-ups, career guidance, performance reviews, and removing blockers.',
+  'Defined success metrics and tripwires within the Dev Degree program using KPIs, collaborating with executive stakeholders to iterate quarterly and optimize program outcomes.',
 ];
 
 const algonquin = [
-  'Created curricula and taught students on game development subjects including, Sound Design, Rapid Prototyping, Level Design, UI/UX Design and others.',
-  'Took high care in providing a safe and encouraging space for students to try things, sometimes failing but always learning.',
-  'Identified struggling students and created learning plans to help them become successful and impactful in their future careers.',
+  'Created and delivered engaging curricula for students, covering a range of game development subjects such as Rapid Prototyping, Level Design II, UI/UX Design, Sound Design and Gamification.',
+  'Fostered a safe and encouraging learning environment, enabling students to explore and experiment, embracing failures as opportunities for growth.',
+  'Identified struggling students and developed tailored learning plans to support their development and ensure future success in their careers.',
 ];
 
 const fuel = [
-  'Wrote quality code and designed games for outside partners (Mattel, McDonalds, Disney) as well as original studio IP.',
-  'Happy Parade, A game designed by myself for McDonalds won the highest award for educational games from the UK Board of Educators.',
-  'I was heavily involved in pitch work, R&D development including researching the move to HTML5, and also conducted sync meetings with outside clients.',
+  "Developed high-quality code and designed games for external partners, including Mattel, McDonald's, Disney, and HBO, as well as original studio IP.",
+  "Received the highest rating for educational game content from the UK Board of Educators for 'Happy Parade,' a game designed by myself for McDonald's Happy Studio.",
+  'Played a vital role in pitch work, research and development (R&D), and the exploration of HTML5 and Unity technologies.',
 ];
 
 const uqo = [
-  'Sole sound designer in an emergent virtual reality lab, creating realistic soundscapes for use in psychoanalytic research by the university.',
-  'Engaged in self-directed field recordings, and coordinated recording sessions with external talent and businesses.',
+  'Sole sound designer in an emergent virtual reality lab, responsible for creating realistic soundscapes used in psychoanalytic research conducted by the university.',
+  'Conducted self-directed field recordings and coordinated recording sessions with external talent and stakeholders.',
 ];
 
 const gamedev = [
@@ -44,7 +45,7 @@ export default function Home() {
       <section className='home-container'>
       <section className='home-info-row'>
         <section style={{ flex: '1 1 auto' }}>
-          <div style={{ display: 'flex' }}><span style={{ flex: '1 1 auto' }}><h1>Derek Ledoux</h1>Front End Developer // Game Developer // Educator</span><span style={{ alignSelf: 'flex-end', fontSize: 'large' }}>derekledoux@gmail.com</span></div><br /><br />
+          <div style={{ display: 'flex' }}><span style={{ flex: '1 1 auto' }}><h1>Derek Ledoux</h1>Front End Developer // Game Developer // Educator</span><span style={{ alignSelf: 'flex-end', fontSize: 'large' }}>derekledoux@gmail.com</span></div><br />
           <p>I'm a versatile developer with a passion for crafting playful experiences. Whether it's designing captivating websites and interfaces, bringing worlds to life in videogames, or creating engaging educational content, I thrive on the intersection of technology, creativity, and growth. With exceptional front-end development skills, a knack for game design, and a love for sharing knowledge, I'm excited to contribute my skills and collaborate with a team that values playful innovation and impact.</p>
         </section>
         <img src='https://raw.githubusercontent.com/doublederek/demo/main/assets/derek.png' />
