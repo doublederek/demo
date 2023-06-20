@@ -1,30 +1,31 @@
 import './Play.css';
 import React, { useState } from 'react';
 import SplitSelector from '../../../../components/SplitSelector/SplitSelector';
-import Tarot from '../../../../components/Tarot/Tarot';
+import Tarot from '../../../../components/Tarot';
 import { Slide } from '@material-ui/core';
-import DereksGame from './components/DereksGame/DereksGame';
+import DereksGame from './components/DereksGame';
+import Accolades from './components/Accolades';
 
-type Game = number | null;
-const games = ['misc', 'tarot', 'dereks'];
+const games = ['accolades', 'tarot', 'dereks'];
 
 export default function Play() { 
-  const [game, setGame] = useState<Game>(null);
+  const [game, setGame] = useState('');
 
   const gameMarkup = () => {
-    if (games[game] === 'tarot')
+    if(game === 'accolades')
+      return <Accolades />
+    else if (game === 'tarot')
       return <Tarot />;
-    else if (games[game] === 'dereks')
+    else if (game === 'dereks')
       return <DereksGame />;
     
-    setGame(null);
     return null;
   }
 
   return (
     <Slide direction='right' in>
       <section style={{ width: '100%', height: '100%'}}>
-        { game ? gameMarkup() : <SplitSelector setSelection={ setGame }/> }
+        { game ? gameMarkup() : <SplitSelector selections={ games } setSelection={ setGame }/> }
       </section>
     </Slide>
   );

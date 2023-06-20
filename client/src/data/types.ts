@@ -25,3 +25,10 @@ export interface TarotCard {
   url: string,
   data: TarotCardData | null,
 }
+
+export interface ModuleData {
+  title: string,
+  subtitle: string,
+  description: string,
+  items: string[],
+}

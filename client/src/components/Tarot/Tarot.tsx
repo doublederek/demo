@@ -30,7 +30,7 @@ export default function Tarot() {
   }
 
   const overlayMarkup = <section style={{ width: '100%', height: '100%', backgroundColor: 'rgba(0, 0, 0, 0.8)', position: 'fixed' }} />;
-  const drawCardMarkup = <p className='tarot-draw-card' onClick={ () => setDrawCard(true) }>THINK OF A QUESTION<br/><br/>DRAW A CARD</p>;
+  const drawCardMarkup = <p className='tarot-draw-card' onClick={ () => setDrawCard(true) }>THINK OF A QUESTION<br/><br/>CLICK TO DRAW A CARD</p>;
 
   const tarotMarkup = drawCard ? 
     <>
